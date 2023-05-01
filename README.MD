@@ -6,7 +6,8 @@ We want to analyze only the data related to the Falcon 9 Block 5 launches, which
 
 We then visualize some key information regarding the Falcon 9 Block 5 launches using a bar plot. Specifically, we plot the counts of successful and unsuccessful booster landings, as well as the counts of successful and unsuccessful launches. We do this using a subplot with two columns, one for each plot. This helps us get a quick understanding of the success rates of these launches.
 
-<img src=(/Users/FcoX/ironhack/Projects/project-spacex/launch_landing.png) alt=launch_landing>
+[Alt text](launch_landing.png)
+
 
 To achieve this goal, we will need to carefully plan the rocket's trajectory to ensure that it avoids any potential collisions. This will involve taking into account a range of factors, including the rocket's speed, altitude, and position, as well as the location and trajectory of the ISS and Starlink satellites.
 
