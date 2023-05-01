@@ -47,7 +47,12 @@ def get_iss_sl_positions(numb_of_samples):
 
         if i['longitude']==-81.1184:
             print(f'ISS Not Clear')
+        
+        if i['longitude']==-100.9969:
+            print(f'The ISS is in a range of 2000km')
 
+        if i['latitude']==46.5012:
+            print(f'The ISS is in a range of 2000km')
         else:
             print(f'ISS Clear')
             break
@@ -65,6 +70,12 @@ def get_iss_sl_positions(numb_of_samples):
 
         if i['lng']==-81.1184:
             print(f'SL Not Clear')
+            
+        if i['lat']==32.9365:
+            print(f'The Starlink is in a range of 500km')
+
+        if i['lng']==-85.671860:
+            print(f'The Starlink is in a range of 500km')
 
         else:
             print(f'SL Clear')

@@ -6,8 +6,13 @@ We want to analyze only the data related to the Falcon 9 Block 5 launches, which
 
 We then visualize some key information regarding the Falcon 9 Block 5 launches using a bar plot. Specifically, we plot the counts of successful and unsuccessful booster landings, as well as the counts of successful and unsuccessful launches. We do this using a subplot with two columns, one for each plot. This helps us get a quick understanding of the success rates of these launches.
 
-[Alt text](launch_landing.png)
+![Alt text](launch_landing.jpg)
 
+We can also visualize the distribution of the different types of orbits achieved by the Falcon 9 Block 5 launches.
+
+![Alt text](Orbit.jpg)
+
+Then, this plot can help us to evaluate the success of the Falcon 9 Block 5 launches with respect to the type of orbit achieved.
 
 To achieve this goal, we will need to carefully plan the rocket's trajectory to ensure that it avoids any potential collisions. This will involve taking into account a range of factors, including the rocket's speed, altitude, and position, as well as the location and trajectory of the ISS and Starlink satellites.
 
@@ -17,6 +22,8 @@ So we continue creating a function called 'get_iss_sl_positions' that retrieves 
 
 The function begins by defining the URLs for the ISS and Starlink satellite APIs, and initializing empty lists for the positions of the ISS and Starlink satellites.
 
-Next, it uses the requests library to send HTTP GET requests to the ISS and Starlink satellite APIs to retrieve their current locations. Then, the function loops through each position of the ISS and checks if the latitude and longitude of the position match any of the coordinates of interest for collision avoidance. Similarly, the function loops through each Starlink satellite position and checks if the latitude and longitude of the position match any of the coordinates of interest for collision avoidance. That is a radius of 45km arround Cape Canaveral in Florida.
+Next, it uses the requests library to send HTTP GET requests to the ISS and Starlink satellite APIs to retrieve their current locations. Then, the function loops through each position of the ISS and checks if the latitude and longitude of the position match any of the coordinates of interest for collision avoidance. Similarly, the function loops through each Starlink satellite position and checks if the latitude and longitude of the position match any of the coordinates of interest for collision avoidance. That is a radius of 45km and 2000km for the ISS and 45km and 500 km for the Starlink arround Cape Canaveral in Florida, as a precaution to prevent a crash.
 
-If a match is found for either the ISS or Starlink satellites, the function prints a message indicating that the path is not clear. If no match is found, the function prints a message indicating that the path is clear.
+If a match is found for either the ISS or Starlink satellites, the function prints a message indicating that the path is not clear or its nearby. If no match is found, the function prints a message indicating that the path is clear to launch.
+
+Overall, this project provides valuable insights into the success rates and challenges of launching rockets into LEO and highlights the importance of careful planning and precautions to avoid collisions with other objects in space. Also this project aims to demonstrate the ability to safely and accurately launch rockets into Low Earth Orbit (LEO), which is essential for various scientific, commercial, and national security applications.
