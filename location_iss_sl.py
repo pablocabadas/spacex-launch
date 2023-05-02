@@ -1,3 +1,7 @@
+import pandas as pd
+import requests
+import time
+
 def get_iss_sl_positions(numb_of_samples):
     url = "http://api.open-notify.org/iss-now.json"
     url2 = "https://satellitemap.space/json/sl.json?0.2592483420529641+v1007+19253"
@@ -14,7 +18,7 @@ def get_iss_sl_positions(numb_of_samples):
             position_iss.append(location_iss['iss_position'])
             
         if 'id' in location_sl:
-            time.sleep(2)
+            time.sleep(240)
             print(i)
             position_sl.append(location_sl)
             
